@@ -9,7 +9,7 @@ This project simulates a secure complaint system with a cinematic night-watch (B
 ## 🔧 Tech Stack
 - HTML5
 - CSS3
-- Vanilla JavaScript
+- JavaScript
 
 ---
 
