@@ -39,23 +39,12 @@ Main focus areas:
 - UI state changes
 
 ---
+## 👤 Author
+**Amlan Kumar Das**  
+GitHub: https://github.com/amlanCodeEngineer
 
 ## ⚠️ Disclaimer
 This is a **themed demo project**.
 For real emergencies in Bangladesh, contact **999** immediately.
 
 ---
-
-## 📂 Project Structure
-.
-├── index.html
-├── style.css
-├── script.js
-└── assets/
-├── bat-logo.png
-├── bat-bg-4k.jpg
-└── response.jpg
-
-## 👤 Author
-**Amlan Kumar Das**  
-GitHub: https://github.com/amlanCodeEngineer
