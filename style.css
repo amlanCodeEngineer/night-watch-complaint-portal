@@ -311,4 +311,79 @@
     border-color: rgba(246,196,0,0.45);
   }
   
+  @media (max-width: 600px) {
+
+    body{
+      padding: 14px;
+    }
   
+    .card{
+      padding: 18px;
+      border-radius: 18px;
+    }
+  
+    .top{
+      flex-direction: column;
+      text-align: center;
+      gap: 12px;
+    }
+  
+    .logo{
+      width: 72px;
+      padding: 6px;
+    }
+  
+    .titleBlock h1{
+      font-size: 20px;
+    }
+  
+    .sub{
+      font-size: 12px;
+    }
+  
+    .grid{
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+  
+    input,
+    select,
+    textarea{
+      font-size: 15px;
+      padding: 13px;
+    }
+  
+    textarea{
+      min-height: 130px;
+    }
+  
+    .actions{
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .btn{
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .btn.ghost{
+      width: 100%;
+    }
+  
+    .signalBox{
+      padding: 18px;
+    }
+  
+    .signalBox h2{
+      font-size: 20px;
+    }
+  
+    .signalBox p{
+      font-size: 13px;
+    }
+  
+    .responseImg{
+      max-height: 260px;
+    }
+  }
