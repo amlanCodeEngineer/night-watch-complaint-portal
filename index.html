@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Night Watch Complaint Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="wrap">
+
+    <!-- Form -->
+    <section class="card">
+      <header class="top">
+        <img src="assets/bat-logo.png" alt="Night Watch Logo" class="logo" />
+        <div class="titleBlock">
+          <h1>Night Watch Complaint Portal</h1>
+          <p class="sub">Citizens of Bangladesh — report an issue safely. Keep it clear, keep it true.</p>
+        </div>
+      </header>
+
+      <div class="divider"></div>
+
+      <form id="batForm" autocomplete="off">
+        <div class="grid">
+          <div class="field">
+            <label for="name">Your Name</label>
+            <input id="name" type="text" placeholder="e.g., Amlan Kumar Das" />
+            <small id="nameError" class="error"></small>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" type="text" placeholder="e.g., you@example.com" />
+            <small id="emailError" class="error"></small>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="field">
+            <label for="password">Secret Code (Password)</label>
+
+            <div class="passwordWrap">
+              <input id="password" type="password" placeholder="6+ chars with at least 1 number" />
+
+              <button type="button" id="togglePassword" class="eyeBtn" aria-label="Show password" aria-pressed="false">
+                <svg class="eyeIcon eyeOpen" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"></path>
+                  <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"></path>
+                </svg>
+
+                <svg class="eyeIcon eyeOff" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 3l18 18"></path>
+                  <path d="M10.6 10.6a3 3 0 0 0 4.2 4.2"></path>
+                  <path d="M9.8 5.2A10.6 10.6 0 0 1 12 5c6.5 0 10 7 10 7a17.8 17.8 0 0 1-4.1 5.2"></path>
+                  <path d="M6.1 6.1C3.6 8 2 12 2 12s3.5 7 10 7c1 0 2-.2 3-.5"></path>
+                </svg>
+              </button>
+            </div>
+
+            <small id="passwordError" class="error"></small>
+          </div>
+
+          <div class="field">
+            <label for="urgency">Urgency</label>
+            <select id="urgency">
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+              <option value="emergency">Emergency</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="field">
+            <label for="category">Problem Type</label>
+            <select id="category">
+              <option value="theft">Robbery / Theft</option>
+              <option value="harassment">Harassment</option>
+              <option value="corruption">Corruption / Bribery</option>
+              <option value="traffic">Traffic / Road Issue</option>
+              <option value="missing">Missing Person</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="area">City / Area</label>
+            <input id="area" type="text" placeholder="Dhaka, Chattogram, Sylhet..." />
+            <small class="hint">Optional, but helpful for response.</small>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="complaint">Describe the problem</label>
+          <textarea id="complaint" placeholder="I am a citizen of Bangladesh. This is what happened..."></textarea>
+          <small id="complaintError" class="error"></small>
+        </div>
+
+        <div class="actions">
+          <button class="btn" type="submit"><span class="dot"></span>SEND BAT-SIGNAL</button>
+          <button class="btn ghost" type="button" id="clearBtn">Clear</button>
+        </div>
+
+        <p id="resultMessage" class="result"></p>
+
+        <p class="footnote">
+          ⚠️ In an emergency in Bangladesh, call <b>999</b> immediately.
+          This project demonstrates frontend form validation and UI logic.
+        </p>
+      </form>
+    </section>
+
+    <!-- Success screen -->
+    <section id="signalScreen" aria-live="polite">
+      <div class="signalBox">
+        <img src="assets/response.jpg" alt="Response on the way" class="responseImg" />
+        <h2>Signal Acknowledged</h2>
+        <p>
+            Your information has been secured.<br />
+            Action is being taken.<br /><br />
+          
+            You are not alone tonight.<br />
+            Stay calm — Batman is on the way to protect you.
+          </p>
+          
+        <button class="btn ghost" type="button" id="sendAnotherBtn">SEND ANOTHER BAT-SIGNAL</button>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
